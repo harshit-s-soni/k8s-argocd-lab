@@ -21,13 +21,13 @@ spec:
     spec:
       containers:
         - name: hello-api
-          image: hello-api:v2
+          image: hello-api:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
           env:
             - name: BREAK_READY
-              value: "true"
+              value: "false"
           livenessProbe:
             httpGet:
               path: /health
